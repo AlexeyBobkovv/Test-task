@@ -1,0 +1,37 @@
+.gift {
+    height: 408px;
+    @include flex-center;
+
+    background-image: url('~assets/bg-gift.jpg');
+
+    &__content {
+        width: 80%;
+        height: 178px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__header {
+        flex-direction: row;
+
+        h2 {
+            width: 460px;
+            font-size: 32px;
+            line-height: 42px;
+
+            margin-right: 20px;
+
+            span {
+                color: $fourh-font-color;
+            }
+        }
+    }
+
+    &__text {
+        width: 460px;
+        p:first-child {
+            margin-bottom: 20px;
+        }
+    }
+}

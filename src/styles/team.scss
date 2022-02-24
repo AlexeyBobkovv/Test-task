@@ -1,0 +1,119 @@
+.team {
+    height: 683px;
+    @include flex-center;
+
+    &__container {
+        width: 1450px;
+        height: 484px;
+        @include flex-between;
+        align-items: flex-end;
+    }
+
+    &__tag {
+        width: 20px;
+        height: fit-content;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        font-family: $BN;
+        font-size: 20px;
+        line-height: 16px;
+        letter-spacing: 20px;
+        text-transform: uppercase;
+
+        color: #2f80ed;
+
+        p {
+            writing-mode: sideways-lr;
+        }
+    }
+
+    &__tag-rect {
+        width: 2px;
+        height: 140px;
+
+        background: linear-gradient(
+            180deg,
+            rgba(254, 224, 64, 0) 0%,
+            #fee040 100%
+        );
+    }
+
+    &__group-block {
+        width: 740px;
+        height: 482px;
+    }
+
+    &__header {
+        @include percH(248, 482);
+        width: 97%;
+        margin: 0 auto 49px auto;
+
+        h2 {
+            font-size: 32px;
+            line-height: 42px;
+            letter-spacing: -0.5px;
+            color: #151515;
+
+            margin-bottom: 38px;
+        }
+    }
+
+    &__header-text {
+        p:first-child {
+            margin-bottom: 20px;
+        }
+
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.5px;
+
+        color: #707070;
+
+        span {
+            color: black;
+        }
+    }
+
+    &__group-slider {
+        @include percH(185, 482);
+        @include flex-between;
+        width: 701px;
+        height: 185px;
+        position: relative;
+    }
+
+    &__slider-item {
+        width: 132px;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.arrows {
+    width: 40px;
+    height: 40px;
+    @include flex-center;
+    position: absolute;
+    top: 40%;
+    border-radius: 50%;
+
+    background: #fee040;
+    box-shadow: 0px 15px 40px rgba(254, 224, 64, 0.2);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+    &_pos {
+        &_left {
+            left: -2%;
+        }
+
+        &_right {
+            right: -2%;
+        }
+    }
+}

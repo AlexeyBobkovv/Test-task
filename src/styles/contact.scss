@@ -1,0 +1,54 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+
+    &__upper-text {
+        color: $font-color;
+        opacity: 0.5;
+
+        margin-bottom: 6px;
+
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -0.5px;
+    }
+
+    &_align {
+        &_left {
+            @include percW(131, 460);
+            align-items: flex-start;
+        }
+
+        &_right {
+            align-items: flex-end;
+        }
+    }
+
+    &__lower-text {
+        &_color {
+            &_yell {
+                color: $fourh-font-color;
+            }
+
+            &_white {
+                color: $font-color;
+            }
+
+            &_black {
+                color: #151515;
+            }
+        }
+
+        &_size {
+            &_small {
+                font-size: 14px;
+                line-height: 12px;
+            }
+
+            &_large {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+}

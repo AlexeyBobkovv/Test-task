@@ -1,0 +1,50 @@
+.hero {
+    width: 100%;
+    height: 768px;
+
+    background-image: url('~assets/bg.jpg');
+
+    &__bottom {
+        width: 100%;
+        height: 228px;
+        @include flex-between;
+        align-items: flex-end;
+    }
+
+    &__features-block {
+        @include flex-between;
+        @include percW(1020, 1420);
+        @include percH(56, 228);
+    }
+
+    &__video-block {
+        @include percW(220, 1420);
+        @include percH(220, 228);
+        @include flex-center;
+
+        background-image: url('~assets/stamp.png');
+    }
+
+    &__video-btn {
+        @include percW(140, 220);
+        @include percH(140, 220);
+        @include flex-center;
+
+        background-color: transparent;
+        background-image: url('~assets/photo.png');
+    }
+}
+
+.features-container {
+    @include percW(300, 1020);
+    height: 100%;
+    @include flex-between;
+
+    p {
+        @include percW(180, 260);
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.5px;
+        color: $font-color;
+    }
+}

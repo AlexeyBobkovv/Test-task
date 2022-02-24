@@ -1,0 +1,25 @@
+.header {
+    width: 100%;
+    height: 62px;
+    box-sizing: content-box;
+    padding-top: 1%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &__wrapper {
+        width: 1420px;
+        margin: 0 auto;
+        display: flex;
+        @include flex-between;
+    }
+
+    &__left-block {
+        width: 316px;
+        @include flex-between;
+    }
+
+    &__right-block {
+        @include percW(460, 1420);
+        @include percH(44, 62);
+        @include flex-between;
+    }
+}

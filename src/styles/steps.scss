@@ -1,0 +1,319 @@
+.steps {
+    &__header {
+        height: 356px;
+        @include flex-center;
+
+        &-text {
+            @include percH(156, 356);
+            @include flex-between;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+
+            h2 {
+                font-family: $BN;
+                font-size: 80px;
+                line-height: 64px;
+                text-align: center;
+                letter-spacing: 5px;
+
+                background: linear-gradient(
+                    180deg,
+                    #60b6ff 0%,
+                    rgba(0, 78, 134, 0.8) 100%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            p {
+                width: 64%;
+                font-size: 20px;
+                line-height: 28px;
+                text-align: center;
+
+                color: #505050;
+            }
+        }
+    }
+
+    &__first-step {
+        display: flex;
+    }
+
+    &__img {
+        width: 50%;
+        height: fit-content;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__step-info {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        background-color: #f5f5f5;
+
+        &_position {
+            &_left {
+                justify-content: flex-start;
+            }
+
+            &_right {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__second-step {
+        height: 851px;
+        overflow-x: hidden;
+    }
+
+    &__second-header-block {
+        width: 980px;
+        height: 193px;
+        margin: 80px auto 49px auto;
+    }
+
+    &__slider {
+        width: 1800px;
+        margin-left: 230px;
+    }
+
+    &__slider-item-block {
+        width: 1780px;
+        height: 417px;
+        @include flex-between;
+    }
+
+    &__slider-nav {
+        display: flex;
+        width: 130px;
+        height: 2px;
+        margin: 30px auto 0 auto;
+    }
+
+    &__slider-nav-item {
+        height: 100%;
+        width: 20px;
+        margin-right: 10px;
+        background: #cccccc;
+        border-radius: 10px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &_active {
+            width: 40px;
+            background: #fee040;
+        }
+    }
+
+    &__third-step {
+        display: flex;
+        height: 512px;
+    }
+
+    &__third-list {
+    }
+
+    .third-st__text-line-img {
+        height: fit-content;
+        font-family: $PNI;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+        margin-bottom: 25px;
+
+        color: #505050;
+
+        opacity: 0.7;
+
+        img {
+            width: 30px;
+            height: 30px;
+            margin-right: 20px;
+        }
+
+        p {
+            width: 72%;
+        }
+    }
+}
+
+.slider-item {
+    width: 340px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &__img {
+        z-index: 1;
+
+        &_size_first-inst {
+            width: 173.79px;
+            height: 300px;
+        }
+
+        &_size_second-inst {
+            width: 263.79px;
+            height: 300px;
+        }
+    }
+
+    &__text {
+        width: 260px;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        color: #151515;
+
+        opacity: 0.7;
+        z-index: 1;
+    }
+
+    &__bg {
+        width: 100%;
+        @include percH(357, 417);
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+
+        background: #f5f5f5;
+        border-radius: 2px;
+    }
+}
+
+.step-description {
+    display: flex;
+    flex-direction: column;
+
+    &__first {
+        width: 501px;
+        height: 281px;
+        margin-left: 70px;
+        justify-content: flex-start;
+    }
+
+    &__third {
+        width: 501px;
+        height: 380px;
+        margin-right: 90px;
+        justify-content: flex-start;
+    }
+
+    &__quote-block {
+        @include flex-between;
+        line-height: 26px;
+        letter-spacing: -0.5px;
+    }
+
+    &__circle-avatar {
+        width: 70px;
+        height: 70px;
+        @include flex-center;
+        border-radius: 50%;
+        background-color: #ffffff;
+
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__quote-text-block {
+        width: 401px;
+    }
+
+    &__quote {
+        font-family: $PNI;
+        font-size: 18px;
+        color: #333333;
+        margin-bottom: 21px;
+        opacity: 0.7;
+    }
+
+    &__author {
+        font-size: 16px;
+        color: #151515;
+        opacity: 0.7;
+
+        span {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.desc-header {
+    width: fit-content;
+    display: flex;
+    align-items: flex-end;
+    height: 34px;
+    color: #151515;
+    text-align: center;
+
+    &_first-step {
+        height: 34px;
+        margin-bottom: 18px;
+    }
+
+    &_second-step {
+        margin: 0 auto 28px auto;
+    }
+
+    &__num {
+        width: 107px;
+        height: 27px;
+        margin-right: 20px;
+        background-color: #fee040;
+
+        p {
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__name {
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: -0.5px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.5px;
+        color: #333333;
+        opacity: 0.7;
+
+        &_width {
+            &_first-st {
+                @include percW(460, 501);
+                margin-bottom: 32px;
+            }
+
+            &_second-st {
+                width: 83%;
+                margin: 0 auto;
+                line-height: 28px;
+                text-align: center;
+            }
+
+            &_third-st {
+                width: 90%;
+                line-height: 28px;
+                margin-bottom: 31px;
+            }
+        }
+    }
+}

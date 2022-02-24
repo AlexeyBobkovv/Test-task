@@ -1,0 +1,46 @@
+.cta {
+    height: 446px;
+    @include flex-center;
+    flex-direction: column;
+
+    background-image: url('~assets/bg-cta.jpg');
+
+    &__header {
+        width: 863px;
+        margin: 0 auto 29px auto;
+
+        h2 {
+            font-size: 32px;
+            line-height: 42px;
+            text-align: center;
+            letter-spacing: -0.5px;
+
+            margin-bottom: 39px;
+        }
+
+        span {
+            color: #fee040;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 28px;
+
+            text-align: center;
+            letter-spacing: -0.5px;
+
+            color: #ffffff;
+        }
+    }
+
+    &__btn {
+        width: 400px;
+        height: 70px;
+        margin: 0 auto;
+
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.services {
+    width: 100%;
+    height: 753px;
+
+    background-image: url('~assets/bg-services.jpg');
+
+    &__header {
+        width: 1085px;
+        height: 78px;
+        @include flex-between;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        box-sizing: content-box;
+        padding: 100px 0 20px 0;
+    }
+
+    &__name {
+        width: fit-content;
+        font-family: $BN;
+        font-size: 20px;
+        line-height: 16px;
+        letter-spacing: 20px;
+        text-transform: uppercase;
+
+        color: $fourh-font-color;
+    }
+
+    &__info {
+        width: fit-content;
+        font-size: 31px;
+        line-height: 42px;
+        letter-spacing: -0.5px;
+
+        color: $font-color;
+    }
+
+    &__scroll-slide {
+        height: 415px;
+        display: flex;
+        overflow-x: hidden;
+    }
+}
+
+.margin-block {
+    padding-left: 258px;
+    height: 381px;
+    height: 381px;
+    position: relative;
+}
+
+.list-el {
+    width: 400px;
+    height: 381px;
+    position: relative;
+    letter-spacing: -0.5px;
+    @include flex-between;
+    flex-direction: column;
+    margin-right: 80px;
+
+    &__header {
+        font-family: $PN;
+        font-size: 24px;
+        line-height: 28px;
+
+        color: $font-color;
+    }
+
+    &__info {
+        font-size: 16px;
+        line-height: 26px;
+        color: $font-color;
+        opacity: 0.7;
+    }
+}

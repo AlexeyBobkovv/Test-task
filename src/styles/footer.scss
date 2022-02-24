@@ -1,0 +1,64 @@
+.footer {
+    height: 121px;
+    @include flex-center;
+
+    &__container {
+        @include flex-between;
+        height: 41px;
+    }
+
+    &__logo {
+        width: 296px;
+
+        font-size: 12px;
+        line-height: 18px;
+        color: #707070;
+    }
+
+    &__contacts {
+        width: 716px;
+        display: flex;
+    }
+
+    &__contact-el {
+        &_size {
+            &_small {
+                width: 133px;
+                margin-right: 50px;
+            }
+
+            &_medium {
+                width: 169px;
+                margin-right: 50px;
+            }
+
+            &_large {
+                width: 323px;
+            }
+        }
+
+        p {
+            width: 100%;
+            font-size: 12px;
+            line-height: 12px;
+
+            color: #151515;
+        }
+    }
+
+    &__text-line-img {
+        font-size: 12px;
+        line-height: 12px;
+        display: flex;
+
+        letter-spacing: -0.5px;
+
+        color: #151515;
+
+        img {
+            width: 12px;
+            height: 12px;
+            -webkit-filter: #707070;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.content {
+    @include percW(1180, 1420);
+    height: 13.0625rem;
+    margin: 128px auto 63px auto;
+    @include flex-between;
+    text-align: left;
+
+    &__block {
+        @include percW(580, 1180);
+        height: 100%;
+        @include flex-between;
+        flex-direction: column;
+    }
+
+    &__name-block {
+        @include percW(580, 1180);
+    }
+
+    &__btn-text-block {
+        @include percW(340, 1180);
+    }
+
+    &__btn {
+        background-color: $fourh-font-color;
+    }
+}
