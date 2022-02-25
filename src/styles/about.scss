@@ -18,21 +18,27 @@
 
         h2 {
             color: #151515;
-            font-size: 32px;
+            @include adaptiv-font(32, 14);
             line-height: 42px;
+
+            @media (max-width: 1200px) {
+                line-height: 4vw;
+            }
         }
 
         p {
             color: #707070;
-            font-size: 18px;
+            @include adaptiv-font(18, 12);
             line-height: 28px;
+
+            @media (max-width: 1200px) {
+                line-height: 2vw;
+            }
         }
     }
 
     &__img {
-        width: 300px;
-        height: 100%;
-
+        @include percW(300, 1420);
         transform: rotate(-20.21deg);
     }
 
@@ -44,7 +50,7 @@
         letter-spacing: -0.5px;
 
         h3 {
-            font-size: 24px;
+            @include adaptiv-font(24, 14);
             line-height: 34px;
 
             color: #151515;
@@ -52,7 +58,7 @@
 
         p {
             width: 89%;
-            font-size: 18px;
+            @include adaptiv-font(18, 12);
             line-height: 26px;
             color: #333333;
             opacity: 0.7;
@@ -63,5 +69,17 @@
         @include percH(30, 178);
         @include flex-between;
         text-align: left;
+
+        .yellow-circle {
+            width: 30px;
+            height: 30px;
+            @include flex-center;
+            background-color: #fee040;
+            border-radius: 50%;
+
+            img {
+                width: 50%;
+            }
+        }
     }
 }

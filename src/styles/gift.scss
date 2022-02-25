@@ -5,15 +5,24 @@
     background-image: url('~assets/bg-gift.jpg');
 
     &__content {
-        width: 80%;
+        width: 1420px;
         height: 178px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 1480px) {
+            width: 90%;
+            margin: 0 5%;
+        }
     }
 
     &__header {
         flex-direction: row;
+
+        @media (max-width: 1480px) {
+            @include percW(940, 1420);
+        }
 
         h2 {
             width: 460px;
@@ -25,13 +34,35 @@
             span {
                 color: $fourh-font-color;
             }
+
+            @media (max-width: 1480px) {
+                @include percW(460, 940);
+                @include adaptiv-font(32, 12);
+            }
         }
     }
 
     &__text {
         width: 460px;
+
+        p {
+            line-height: 3vmin;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            opacity: 1;
+
+            @include adaptiv-font(18, 14);
+
+
+        }
+
+
         p:first-child {
             margin-bottom: 20px;
+        }
+
+        @media (max-width: 1480px) {
+            @include percW(460, 940);
         }
     }
 }

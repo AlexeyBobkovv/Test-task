@@ -10,6 +10,10 @@
         margin: 0 auto;
         display: flex;
         @include flex-between;
+
+        @media (max-width: 1460px) {
+            width: 90%;
+        }
     }
 
     &__left-block {
@@ -18,8 +22,12 @@
     }
 
     &__right-block {
-        @include percW(460, 1420);
+        width: 460px;
         @include percH(44, 62);
         @include flex-between;
+
+        @media (max-width: 1460px) {
+            width: 40%;
+        }
     }
 }

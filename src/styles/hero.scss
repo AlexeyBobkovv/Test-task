@@ -18,11 +18,15 @@
     }
 
     &__video-block {
-        @include percW(220, 1420);
-        @include percH(220, 228);
+        max-width: 220px;
+        max-height: 220px;
+        width: 11.47vw;
+        height: 11.47vw;
         @include flex-center;
 
         background-image: url('~assets/stamp.png');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     &__video-btn {
@@ -32,6 +36,13 @@
 
         background-color: transparent;
         background-image: url('~assets/photo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__polygon-icn {
+        @include percW(20, 140);
+        @include percH(20, 140);
     }
 }
 
@@ -40,11 +51,15 @@
     height: 100%;
     @include flex-between;
 
+    margin-right: 5px;
+
     p {
         @include percW(180, 260);
-        font-size: 20px;
+        @include adaptiv-font(20, 14);
         line-height: 28px;
         letter-spacing: -0.5px;
         color: $font-color;
+
+        margin-left: 10px;
     }
 }

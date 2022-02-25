@@ -5,6 +5,10 @@
     &__container {
         @include flex-between;
         height: 41px;
+
+        @media (max-width: 1200px) {
+            height: 80%;
+        }
     }
 
     &__logo {
@@ -13,11 +17,23 @@
         font-size: 12px;
         line-height: 18px;
         color: #707070;
+
+        @media (max-width: 1200px) {
+            width: 25%;
+            @include adaptiv-font(12, 8);
+            line-height: 3vmin;
+            margin-right: 5%;
+        }
     }
 
     &__contacts {
         width: 716px;
         display: flex;
+
+        @media (max-width: 1200px) {
+            width: 80%;
+            height: fit-content;
+        }
     }
 
     &__contact-el {
@@ -25,15 +41,27 @@
             &_small {
                 width: 133px;
                 margin-right: 50px;
+
+                @media (max-width: 1200px) {
+                    margin-right: 4%;
+                }
             }
 
             &_medium {
                 width: 169px;
                 margin-right: 50px;
+
+                @media (max-width: 1200px) {
+                    margin-right: 4%;
+                }
             }
 
             &_large {
                 width: 323px;
+
+                @media (max-width: 1200px) {
+                    margin-right: 4%;
+                }
             }
         }
 
@@ -43,6 +71,10 @@
             line-height: 12px;
 
             color: #151515;
+
+            @media (max-width: 1200px) {
+                @include adaptiv-font(12, 8);
+            }
         }
     }
 

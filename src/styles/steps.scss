@@ -39,6 +39,11 @@
 
     &__first-step {
         display: flex;
+
+        @media (max-width: 1340px) {
+            flex-direction: column;
+            background-color: #f5f5f5;
+        }
     }
 
     &__img {
@@ -48,6 +53,11 @@
         img {
             width: 100%;
             height: 100%;
+        }
+
+        @media (max-width: 1340px) {
+            width: 70%;
+            margin: 0 auto;
         }
     }
 
@@ -66,6 +76,10 @@
                 justify-content: flex-end;
             }
         }
+
+        @media (max-width: 1340px) {
+            width: 100%;
+        }
     }
 
     &__second-step {
@@ -77,6 +91,10 @@
         width: 980px;
         height: 193px;
         margin: 80px auto 49px auto;
+
+        @media (max-width: 1340px) {
+            width: 90%;
+        }
     }
 
     &__slider {
@@ -116,7 +134,11 @@
 
     &__third-step {
         display: flex;
-        height: 512px;
+
+        @media (max-width: 1340px) {
+            flex-direction: column;
+            background-color: #f5f5f5;
+        }
     }
 
     &__third-list {
@@ -133,12 +155,6 @@
         color: #505050;
 
         opacity: 0.7;
-
-        img {
-            width: 30px;
-            height: 30px;
-            margin-right: 20px;
-        }
 
         p {
             width: 72%;
@@ -197,10 +213,15 @@
     flex-direction: column;
 
     &__first {
+        @include percW(960, 501);
         width: 501px;
         height: 281px;
         margin-left: 70px;
         justify-content: flex-start;
+
+        @media (max-width: 1340px) {
+            margin: 10px auto 10px auto;
+        }
     }
 
     &__third {
@@ -208,6 +229,16 @@
         height: 380px;
         margin-right: 90px;
         justify-content: flex-start;
+
+        @media (max-width: 1500px) {
+            width: 85%;
+            margin-right: 30px;
+        }
+
+        @media (max-width: 1340px) {
+            width: 70%;
+            margin: 20px auto;
+        }
     }
 
     &__quote-block {
@@ -239,12 +270,21 @@
         color: #333333;
         margin-bottom: 21px;
         opacity: 0.7;
+
+        @media (max-width: 1340px) {
+            @include adaptiv-font(18, 14);
+        }
     }
 
     &__author {
         font-size: 16px;
+
         color: #151515;
         opacity: 0.7;
+
+        @media (max-width: 1340px) {
+            @include adaptiv-font(16, 10);
+        }
 
         span {
             text-transform: uppercase;
@@ -259,6 +299,10 @@
     height: 34px;
     color: #151515;
     text-align: center;
+
+    @media (max-width: 1340px) {
+        width: fit-content;
+    }
 
     &_first-step {
         height: 34px;
@@ -275,11 +319,19 @@
         margin-right: 20px;
         background-color: #fee040;
 
+        @media (max-width: 1340px) {
+            width: 7rem;
+        }
+
         p {
             font-size: 16px;
             line-height: 23px;
             letter-spacing: 3px;
             text-transform: uppercase;
+
+            @media (max-width: 1340px) {
+                @include adaptiv-font(16, 10);
+            }
         }
     }
 
@@ -287,14 +339,21 @@
         font-size: 24px;
         line-height: 34px;
         letter-spacing: -0.5px;
+
+        @media (max-width: 1340px) {
+            @include adaptiv-font(24, 14);
+        }
     }
 
     &__text {
-        font-size: 18px;
+        @include adaptiv-font(18, 12);
         line-height: 26px;
         letter-spacing: -0.5px;
         color: #333333;
         opacity: 0.7;
+
+        @media (max-width: 1340px) {
+        }
 
         &_width {
             &_first-st {
