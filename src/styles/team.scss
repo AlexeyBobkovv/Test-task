@@ -16,7 +16,7 @@
 
     &__tag {
         width: 20px;
-        height: fit-content;
+        height: 75%;
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -30,13 +30,16 @@
         color: #2f80ed;
 
         p {
-            writing-mode: sideways-lr;
+            transform: rotate(-90deg);
+
         }
     }
 
     &__tag-rect {
         width: 2px;
         height: 140px;
+
+        margin-bottom: 100px;
 
         background: linear-gradient(
             180deg,
