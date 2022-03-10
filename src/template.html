@@ -6,9 +6,108 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="https://kit.fontawesome.com/f19200b90a.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div class="wrapper">
+      <main class="main">
+        <div class="main__content">
+          <a class="main__logo" href="#">
+            <div class="main__logo-img">
+              <img src="./assets/logo.svg" alt="logo" />
+            </div>
+            <div class="main__logo-text">
+              <img src="./assets/logo-text.svg" alt="logo-text" />
+            </div>
+          </a>
+
+          <div class="main__info">
+            <h1 class="main__info-header">Under Construction</h1>
+            <p class="main__info-text">We're making lots of improvements and will be back soon</p>
+          </div>
+
+          <div class="main__timer">
+            <div class="time-block">
+              <div class="time-block__number time-block__days">92</div>
+              <div class="time-block__name">
+                <p class="time-block__name-text_vis_pc">Days</p>
+                <p class="time-block__name-text_vis_ph">DD</p>
+              </div>
+            </div>
+            <div class="time-block__colon"><span>:</span></div>
+            <div class="time-block">
+              <div class="time-block__number time-block__hours">11</div>
+              <div class="time-block__name">
+                <p class="time-block__name-text_vis_pc">Hours</p>
+                <p class="time-block__name-text_vis_ph">HH</p>
+              </div>
+            </div>
+            <div class="time-block__colon"><span>:</span></div>
+            <div class="time-block">
+              <div class="time-block__number time-block__minutes">41</div>
+              <div class="time-block__name">
+                <p class="time-block__name-text_vis_pc">Minutes</p>
+                <p class="time-block__name-text_vis_ph">MM</p>
+              </div>
+            </div>
+            <div class="time-block__colon"><span>:</span></div>
+            <div class="time-block">
+              <div class="time-block__number time-block__seconds">48</div>
+              <div class="time-block__name">
+                <p class="time-block__name-text_vis_pc">Seconds</p>
+                <p class="time-block__name-text_vis_ph">SS</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="main__event">
+            <div class="main__event-text">
+              <p>Check our event page when you wait:</p>
+            </div>
+            <a class="main__btn btn" href="https://alexeybobkovv.github.io/My-CV/dist/">
+              <div class="btn-text">
+                <p>Go to the event</p>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="main__vector main__vector_pos_left">
+          <img src="./assets/left-vector.svg" alt="" class="vector-img" />
+        </div>
+        <div class="main__vector main__vector_pos_right">
+          <img src="./assets/right-vector.svg" alt="" class="vector-img" />
+        </div>
+      </main>
+      <footer class="footer">
+        <form method="GET" name="form" action="">
+          <div class="form">
+            <input
+              type="text"
+              name="email"
+              class="form__input"
+              placeholder="Enter your Email and get notified"
+            />
+            <button type="submit" class="form__button">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </footer>
+      <div class="popup">
+        <div class="popup__block">
+          <button class="popup__cross-btn popup__exit-btn">
+            <img src="./assets/cancel.svg" alt="" />
+          </button>
+          <div class="popup__text">
+            <h2>SUCCESS!</h2>
+            <p>You have successfully subscribed to the email newsletter</p>
+          </div>
+          <button class="popup__close-btn btn popup__exit-btn">Close</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

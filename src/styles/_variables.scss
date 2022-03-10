@@ -1,5 +1,42 @@
-$font-size: 1rem;
-$font-family: 'Inter', sans-serif;
-$background-color: #121212;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+$font-size: 18px;
+$font-family: 'Poppins', sans-serif;
+$background-color: #ffffff;
 $font-color: #dae0e0;
 $page-width: 650px;
+
+$dark-blue: #162c4e;
+$white: #ffffff;
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin percW($less, $more) {
+  width: calc($less / $more) * 100%;
+}
+
+@mixin percH($less, $more) {
+  height: calc($less / $more) * 100%;
+}
+
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  @media (max-width: 1920px) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+
+  @media (min-width: 1920px) {
+    font-size: calc(#{$pcSize + px});
+  }
+}

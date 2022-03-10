@@ -9,17 +9,71 @@ html {
 body {
   margin: auto;
   text-align: center;
-  max-width: $page-width;
+
+  transition: all 0.5s;
 }
 
 h1 {
   margin: 0 0 2rem;
 }
 
-.image {
-  display: inline-block;
-  height: 100px;
-  width: 100px;
-  background-image: url('~assets/example.png');
-  background-size: cover;
+img {
+  width: 100%;
+  height: 100%;
+
+  transition: ease-in-out 0.5s;
+}
+
+.wrapper {
+  max-width: 120rem;
+  height: 52.7778rem;
+  margin: 0 auto;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1200px) {
+    height: 64rem;
+  }
+
+  @media (max-width: 480px) {
+    height: 50.8rem;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #1d4169;
+  border-radius: 40px;
+
+  font-weight: normal;
+  @include adaptiv-font(18, 16);
+  line-height: 150%;
+  color: #ffffff;
+
+  transition: all 0.9s ease;
+  transform: rotateZ(0deg);
+
+  .btn-text {
+    @include percW(192, 240);
+    display: flex;
+    justify-content: space-between;
+
+    i {
+      line-height: unset;
+    }
+  }
+}
+
+.valid {
+  transform: rotateZ(-360deg);
+}
+
+.invalid {
+  transition: all 0.9s ease;
+  transform: rotateZ(-360deg);
 }
