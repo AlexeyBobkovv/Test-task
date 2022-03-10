@@ -66,6 +66,25 @@ const form = document.querySelector('form')
 const input = document.querySelector('[name="email"]')
 const popup = document.querySelector('.popup')
 
+form.addEventListener('submit', function (e) {
+  var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+
+  if (input.value.match(pattern)) {
+    e.preventDefault()
+    let myForm = form
+    let formData = new FormData(myForm)
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => (popup.style.display = 'block'), (input.value = ''))
+      .catch((error) => alert(error))
+  } else {
+    alert('Please enter correct email address')
+  }
+})
+
 // formBtn.addEventListener('click', () => {
 
 //   if (input.value.match(pattern)) {
@@ -81,27 +100,27 @@ const popup = document.querySelector('.popup')
 //   }
 // })
 
-form.addEventListener('submit', function (event) {
-  var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+// form.addEventListener('submit', function (event) {
+//   var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
 
-  if (input.value.match(pattern)) {
-    const searchParams = new URLSearchParams()
+//   if (input.value.match(pattern)) {
+//     const searchParams = new URLSearchParams()
 
-    searchParams.set('email', input.value)
+//     searchParams.set('email', input.value)
 
-    const path = '/handler/?' + searchParams.toString()
+//     const path = '/handler/?' + searchParams.toString()
 
-    fetch(path)
-      .then((response) => {
-        return response.text()
-      })
-      .then(() => {
-        popup.style.display = 'block'
-        input.value = ''
-      })
-  } else {
-    alert('Please enter correct email address')
-  }
+//     fetch(path)
+//       .then((response) => {
+//         return response.text()
+//       })
+//       .then(() => {
+//         popup.style.display = 'block'
+//         input.value = ''
+//       })
+//   } else {
 
-  event.preventDefault()
-})
+//   }
+
+//   event.preventDefault()
+// })
